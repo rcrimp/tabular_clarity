@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            color: white;
+            background-color: black;
+        }
+
+        form {
+            margin-bottom: 32px;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .flex {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-bottom: 32px;
+        }
+
+        textarea {
+            display: block;
+            margin: 32px auto;
+            max-width: 90%;
+        }
+
+        form {
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="flex">
+        <div id="all_gotham_fonts"></div>
+        <div id="all_clarity_fonts"></div>
+        <div id="all_mono_fonts"></div>
+    </div>
+    <form>
+        <label for="select_font">Font:</label>
+        <select id="select_font" name="font"></select>
+        <label for="selcet_size">Size:</label>
+        <select id="select_size" name="size"></select>
+    </form>
+    <div class="flex">
+        <div class="left">
+            <p>Text</p>
+            <p>Fisher & Paykel</p>
+            <p>0123456789</p>
+            <p lang="en">ABCDEFGHIJKLMNOP</p>
+            <p lang="en">QRSTUVWXYZ</p>
+            <p lang="en">abcdefghijklmnop</p>
+            <p lang="en">qrstuvwxyz</p>
+            <p lang="es">áéíóúñ</p>
+            <p lang="de">äöüß</p>
+            <p lang="fr">àâçéèêëîïôûùüÿ</p>
+            <p lang="cn">你好，世界</p>
+            <p lang="he">שלום עולם</p>
+        </div>
+        <div class="right">
+            <p>Numbers</p>
+            <p>11:11 am</p>
+            <p>00:00 am</p>
+            <p>12h 34m 56s</p>
+            <p>111111111111111111111111111111</p>
+            <p>777777777777777777777777777777</p>
+            <p>222222222222222222222222222222</p>
+            <p>333333333333333333333333333333</p>
+            <p>555555555555555555555555555555</p>
+            <p>666666666666666666666666666666</p>
+            <p>888888888888888888888888888888</p>
+            <p>999999999999999999999999999999</p>
+            <p>444444444444444444444444444444</p>
+            <p>000000000000000000000000000000</p>
+        </div>
+    </div>
+    <textarea name="textarea" rows="10" cols="80" placeholder="type here..."></textarea>
+</body>
+
+<script type="text/javascript" src="fonts.js"></script>
+
+</html>
