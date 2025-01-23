@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Rethink+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+        @font-face {
+            font-family: 'Tabular Gotham Book';
+            src: url('./Gotham/tabular_gotham_book.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Tabular Gotham Medium';
+            src: url('./Gotham/tabular_gotham_medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Tabular Gotham Light';
+            src: url('./Gotham/tabular_gotham_light.ttf') format('truetype');
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Tabular Gotham Extra Light';
+            src: url('./Gotham/tabular_gotham_extra_light.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Tabular Gotham Thin';
+            src: url('./Gotham/tabular_gotham_thin.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Regular';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Medium';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Light';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Light.ttf') format('truetype');
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Extra Light';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-ExtraLight.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Thin';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Thin.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        body {
+            display: flex;
+            height: 100vh;
+            background: #353535;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        p.title {
+            margin: 0px;
+            font-size: 1.5em;
+            color: lightblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: normal;
+        }
+
+        .numbers p {
+            font-size: 3em;
+            font-variant: tabular-nums;
+            -moz-font-feature-settings: "tnum";
+            -webkit-font-feature-settings: "tnum";
+            font-feature-settings: "tnum";
+            color: white;
+            margin: 0;
+        }
+
+        div.box {
+            width: 100%;
+            min-width: 400px;
+            margin: 10px;
+            padding: 15px 25px;
+            background: black;
+            box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.75);
+            border-radius: 10px;
+        }
+
+        #fonts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #fonts>div {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fonts">
+        <!-- local ttf -->
+        <div id="Gotham"></div>
+        <div id="ClarityCity"></div>
+        <!-- google fonts -->
+        <div id="Roboto"></div>
+        <div id="Rethink Sans"></div>
+        <div id="Montserrat"></div>
+    </div>
+</body>
+
+<script>
+
+
+    const fontDivs = ["Roboto", "Rethink Sans", "Montserrat"];
+    const fontWeight = ["400", "500", "600", "700"];
+    for (let i = 0; i < fontDivs.length; i++) {
+        const font = fontDivs[i];
+        const div = document.getElementById(font);
+        for (let j = 0; j < fontWeight.length; j++) {
+            const weight = fontWeight[j];
+            div.innerHTML += `
+                <div class="box" style="font-family: '${font}', sans-serif; font-weight: ${weight}">
+                    <p class="title">${font} ${weight}</p>
+                    <hr>
+                    <div class="numbers">
+                        <p>0123456789</p>
+                        <p>9876543210</p>
+                        <p>0011101110</p>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    const gothamWeights = ["Extra Light", "Light", "Book", "Medium"];
+    for (let f = 0; f < gothamWeights.length; f++) {
+        const fontFamily = `Tabular Gotham ${gothamWeights[f]}`;
+        const div = document.getElementById("Gotham");
+        div.innerHTML += `
+                <div class="box" style="font-family: '${fontFamily}', serif">
+                    <p class="title">${fontFamily}</p>
+                    <hr>
+                    <div class="numbers">
+                        <p>0123456789</p>
+                        <p>9876543210</p>
+                        <p>0011101110</p>
+                    </div>
+                </div>
+            `;
+    }
+
+    const clarityWeights = ["Extra Light", "Light", "Regular", "Medium"];
+    for (let f = 0; f < clarityWeights.length; f++) {
+        const fontFamily = `Clarity City ${clarityWeights[f]}`;
+        const div = document.getElementById("ClarityCity");
+        div.innerHTML += `
+                <div class="box" style="font-family: '${fontFamily}', serif">
+                    <p class="title">${fontFamily}</p>
+                    <hr>
+                    <div class="numbers">
+                        <p>0123456789</p>
+                        <p>9876543210</p>
+                        <p>0011101110</p>
+                    </div>
+                </div>
+            `;
+    }
+
+
+</script>
+
+
+</html>
