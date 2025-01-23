@@ -47,35 +47,35 @@
 
         @font-face {
             font-family: 'Clarity City Regular';
-            src: url('./TabularClarityCity/Tabular_ClarityCity-Regular.ttf') format('truetype');
+            src: url('./TabularClarityCity/ClarityCity-Regular.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Clarity City Medium';
-            src: url('./TabularClarityCity/Tabular_ClarityCity-Medium.ttf') format('truetype');
+            src: url('./TabularClarityCity/ClarityCity-Medium.ttf') format('truetype');
             font-weight: 500;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Clarity City Light';
-            src: url('./TabularClarityCity/Tabular_ClarityCity-Light.ttf') format('truetype');
+            src: url('./TabularClarityCity/ClarityCity-Light.ttf') format('truetype');
             font-weight: lighter;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Clarity City Extra Light';
-            src: url('./TabularClarityCity/Tabular_ClarityCity-ExtraLight.ttf') format('truetype');
+            src: url('./TabularClarityCity/ClarityCity-ExtraLight.ttf') format('truetype');
             font-weight: 200;
             font-style: normal;
         }
 
         @font-face {
             font-family: 'Clarity City Thin';
-            src: url('./TabularClarityCity/Tabular_ClarityCity-Thin.ttf') format('truetype');
+            src: url('./TabularClarityCity/ClarityCity-Thin.ttf') format('truetype');
             font-weight: 100;
             font-style: normal;
         }
@@ -135,7 +135,7 @@
         <div id="ClarityCity"></div>
         <!-- google fonts -->
         <div id="Roboto"></div>
-        <div id="Rethink Sans"></div>
+        <!-- <div id="Rethink Sans"></div> -->
         <div id="Montserrat"></div>
     </div>
 </body>
@@ -143,8 +143,8 @@
 <script>
 
 
-    const fontDivs = ["Roboto", "Rethink Sans", "Montserrat"];
-    const fontWeight = ["400", "500", "600", "700"];
+    const fontDivs = ["Roboto", "Montserrat"];
+    const fontWeight = ["100", "200", "300", "400", "500"];
     for (let i = 0; i < fontDivs.length; i++) {
         const font = fontDivs[i];
         const div = document.getElementById(font);
@@ -164,7 +164,7 @@
         }
     }
 
-    const gothamWeights = ["Extra Light", "Light", "Book", "Medium"];
+    const gothamWeights = ["Thin", "Extra Light", "Light", "Book", "Medium"];
     for (let f = 0; f < gothamWeights.length; f++) {
         const fontFamily = `Tabular Gotham ${gothamWeights[f]}`;
         const div = document.getElementById("Gotham");
@@ -181,7 +181,7 @@
             `;
     }
 
-    const clarityWeights = ["Extra Light", "Light", "Regular", "Medium"];
+    const clarityWeights = ["Thin", "Extra Light", "Light", "Regular", "Medium"];
     for (let f = 0; f < clarityWeights.length; f++) {
         const fontFamily = `Clarity City ${clarityWeights[f]}`;
         const div = document.getElementById("ClarityCity");
