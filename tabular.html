@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Tabular_ClarityCity-Bold.ttf */
+        @font-face {
+            font-family: 'Clarity City Bold';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Bold.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        /* Tabular_ClarityCity-SemiBold.ttf */
+        @font-face {
+            font-family: 'Clarity City SemiBold';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-SemiBold.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        /* Tabular_ClarityCity-Black.ttf */
+        @font-face {
+            font-family: 'Clarity City Black';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Black.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        /* Tabular_ClarityCity-ExtraBold.ttf */
+        @font-face {
+            font-family: 'Clarity City ExtraBold';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-ExtraBold.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Regular';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Medium';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Light';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Light.ttf') format('truetype');
+            font-weight: lighter;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Extra Light';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-ExtraLight.ttf') format('truetype');
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Clarity City Thin';
+            src: url('./TabularClarityCity/Tabular_ClarityCity-Thin.ttf') format('truetype');
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        body {
+            background: #e4e4e4;
+        }
+
+        p.title {
+            margin: 0px;
+            font-size: 1.5em;
+            color: lightblue;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: normal;
+        }
+
+        .numbers p {
+            font-size: 3em;
+            font-variant: tabular-nums;
+            -moz-font-feature-settings: "tnum";
+            -webkit-font-feature-settings: "tnum";
+            font-feature-settings: "tnum";
+            color: white;
+            margin: 0;
+        }
+
+        div.box {
+            margin: 10px;
+            padding: 15px 25px;
+            background: black;
+            box-shadow: 0px 0px 5px 0px rgba(1, 1, 1, 0.75);
+            border-radius: 10px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fonts">
+        <!-- local ttf -->
+        <div id="ClarityCity"></div>
+    </div>
+</body>
+
+<script>
+    const clarityWeights = ["Thin", "Extra Light", "Light", "Regular", "Medium", "SemiBold", "Bold", "ExtraBold", "Black"];
+    for (let f = 0; f < clarityWeights.length; f++) {
+        const fontFamily = `Clarity City ${clarityWeights[f]}`;
+        const div = document.getElementById("ClarityCity");
+        div.innerHTML += `
+                <div class="box" style="font-family: '${fontFamily}', fantasy">
+                    <p class="title">${fontFamily}</p>
+                    <hr>
+                    <div class="numbers">
+                        <p>12°C 34°F 12℃ 34℉</p>
+                    </div>
+                </div>
+            `;
+    }
+
+
+</script>
+
+
+</html>
